@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ケアマネ条例クイズ</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="quiz-panel" aria-labelledby="app-title">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">介護保険制度 / 条例</p>
+            <h1 id="app-title">ケアマネ条例クイズ</h1>
+          </div>
+          <button class="icon-button" id="resetButton" type="button" aria-label="成績をリセット" title="成績をリセット">
+            <span aria-hidden="true">↺</span>
+          </button>
+        </header>
+
+        <div class="rule-strip" aria-label="暗記フレーズ">
+          <p>地域・支援は市町村</p>
+          <p>それ以外と施設は県</p>
+        </div>
+
+        <section class="question-area" aria-live="polite">
+          <div class="question-meta">
+            <span id="questionNumber">1 / 15</span>
+            <span id="tagLabel">居宅サービス</span>
+          </div>
+          <h2 id="questionText">指定居宅サービスの基準はどちらの条例？</h2>
+          <div class="choice-grid">
+            <button class="choice" id="prefectureButton" type="button" data-answer="prefecture">
+              <span class="choice-kicker">🏢</span>
+              <span>都道府県条例</span>
+            </button>
+            <button class="choice" id="municipalityButton" type="button" data-answer="municipality">
+              <span class="choice-kicker">🏠</span>
+              <span>市町村条例</span>
+            </button>
+          </div>
+          <div class="feedback" id="feedback" hidden></div>
+          <div class="action-row">
+            <button class="secondary-button" id="wrongOnlyButton" type="button">間違いだけ</button>
+            <button class="primary-button" id="nextButton" type="button">次の問題</button>
+          </div>
+        </section>
+      </section>
+
+      <aside class="study-panel" aria-label="学習メモ">
+        <section class="stats">
+          <div>
+            <span class="stat-value" id="correctCount">0</span>
+            <span class="stat-label">正解</span>
+          </div>
+          <div>
+            <span class="stat-value" id="streakCount">0</span>
+            <span class="stat-label">連続</span>
+          </div>
+          <div>
+            <span class="stat-value" id="accuracyRate">0%</span>
+            <span class="stat-label">正答率</span>
+          </div>
+        </section>
+
+        <section class="note-block">
+          <h2>都道府県条例</h2>
+          <p class="memory-line">施設と普通のサービスは県</p>
+          <ul>
+            <li>指定居宅サービス</li>
+            <li>指定介護予防サービス</li>
+            <li>基準該当居宅サービス</li>
+            <li>基準該当介護予防サービス</li>
+            <li>指定介護老人福祉施設</li>
+            <li>介護老人保健施設</li>
+            <li>介護医療院</li>
+          </ul>
+        </section>
+
+        <section class="note-block">
+          <h2>市町村条例</h2>
+          <p class="memory-line">地域とケアマネは市町村</p>
+          <ul>
+            <li>地域密着型サービス</li>
+            <li>地域密着型介護予防サービス</li>
+            <li>居宅介護支援</li>
+            <li>介護予防支援</li>
+            <li>基準該当居宅介護支援</li>
+            <li>基準該当介護予防支援</li>
+          </ul>
+        </section>
+
+        <section class="trap-block">
+          <h2>ひっかけ</h2>
+          <p><strong>居宅サービス</strong>は都道府県。<strong>居宅介護支援</strong>は「支援」なので市町村。</p>
+        </section>
+      </aside>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
